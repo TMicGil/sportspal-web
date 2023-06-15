@@ -8,11 +8,11 @@ export default {
         "gray-50": "#EFE6E6",
         "gray-100": "#DFCCCC",
         "gray-500": "#5E0000",
-        "primary-100": "#FFE1E0",
-        "primary-300": "#FFA6A3",
-        "primary-500": "#FF6B66",
-        "secondary-400": "#FFCD5B",
-        "secondary-500": "#FFC132",
+        "primary-100": "#1F4E5A",
+        "primary-300": "#12343D",
+        "primary-500": "#0C2329",
+        "secondary-400": "#E96A5B",
+        "secondary-500": "#EE5745",
       },
       backgroundImage: (theme) => ({
         "gradient-yellowred":
@@ -23,12 +23,12 @@ export default {
         dmsans: ["DM Sans", "sans-serif"],
         montserrat: ["Montserrat", "sans-serif"],
       },
-      // content: {
-      //   evolvetext: "url('./assets/EvolveText.png')",
-      //   abstractwaves: "url('./assets/AbstractWaves.png')",
-      //   sparkles: "url('./assets/Sparkles.png')",
-      //   circles: "url('./assets/Circles.png')",
-      // },
+      content: {
+        bebettertext: "url('./assets/BeBetterText.png')",
+        // abstractwaves: "url('./assets/AbstractWaves.png')",
+        // sparkles: "url('./assets/Sparkles.png')",
+        // circles: "url('./assets/Circles.png')",
+      },
     },
     screens: {
       xs: "480px",
