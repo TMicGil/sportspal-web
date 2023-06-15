@@ -15,11 +15,14 @@ const Home = ({ setSelectedPage }: Props) => {
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
       {/* IMAGE AND MAIN HEADER */}
-      <div className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6">
+      <m.div
+        onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
+        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+      >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5 ">
           {/* HEADINGS */}
-          <m.div className="md:-mt-20">
+          <div className="md:-mt-20">
             <div className="relative">
               <div className="before:-left-20 before:-top-20 before:z-[-1] md:before:absolute  md:before:content-bebettertext">
                 <img alt="home-page-text" src={HomePageText} />
@@ -30,7 +33,7 @@ const Home = ({ setSelectedPage }: Props) => {
               Studios to get the Body Shapes That you Dream of.. Get Your Dream
               Body Now.
             </p>
-          </m.div>
+          </div>
           {/* ACTIONS */}
           <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>
@@ -49,7 +52,7 @@ const Home = ({ setSelectedPage }: Props) => {
         <div>
           <img alt="home-pageGraphic" src={HomePageGraphic} />
         </div>
-      </div>
+      </m.div>
       {/* ---- SPONSORS ---- {isAboveMediumScreen && (
         <div className="h-[150px] w-full bg-primary-100 py-10">
           <div className="mx-auto w-5/6">
