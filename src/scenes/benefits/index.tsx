@@ -1,7 +1,7 @@
 import {
-  HomeModernIcon,
+  MapPinIcon,
   UserGroupIcon,
-  AcademicCapIcon,
+  RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
 import { BenefitType, MockupType, SelectedPage } from "@/shared/types";
 import { motion as m } from "framer-motion";
@@ -14,20 +14,20 @@ import MocksUp from "./MocksUp";
 
 const benefits: Array<BenefitType> = [
   {
-    icon: <HomeModernIcon className="h-6 w-6" />,
-    title: "State of the Art Facilities",
+    icon: <UserGroupIcon className="h-6 w-6" />,
+    title: "Meet like minded people",
     description:
       "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
   },
   {
-    icon: <UserGroupIcon className="h-6 w-6" />,
-    title: "100's of Diverse Classes",
+    icon: <MapPinIcon className="h-6 w-6" />,
+    title: "Schedule a meeting point",
     description:
       "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
   },
   {
-    icon: <AcademicCapIcon className="h-6 w-6" />,
-    title: "Expert and Pro Trainers",
+    icon: <RocketLaunchIcon className="h-6 w-6" />,
+    title: "Get started !",
     description:
       "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
   },
@@ -62,11 +62,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
         {/* HEADER  */}
         <div className="md:my-5 md:w-3/5">
-          <HText>More than just an app.</HText>
+          <HText>More than just an app</HText>
           <p className="my-5 text-sm">
-            We provide world class fitness equipment, trainers and classes to
-            get you to your ultimate fitness goals with ease. We provide true
-            care into each and every member.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
+            ducimus deleniti error nisi officia sint aliquid obcaecati laborum
+            dolorem aperiam itaque omnis, tenetur recusandae veniam similique at
+            in? Consequuntur, maiores.
           </p>
         </div>
         {/* BENEFITS */}
@@ -75,7 +76,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
           variants={container}
-          className="item-center mt-5 justify-between gap-8 md:flex"
+          className="mt-5 items-center justify-between gap-8 md:flex"
         >
           {benefits.map((benefit: BenefitType) => (
             <Benefit
@@ -90,14 +91,23 @@ const Benefits = ({ setSelectedPage }: Props) => {
         <m.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={container}
-          className="item-center mt-10 justify-between gap-10 md:flex"
+          className="mt-10 w-full items-center justify-between gap-10 md:flex"
         >
           {mocksup.map((mockup: MockupType) => (
             <MocksUp image={mockup.image} />
           ))}
         </m.div>
+        <div className="md:my-15 mt-10 md:w-3/5">
+          <HText>As fast as you can !</HText>
+          <p className="my-5 text-sm">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
+            ducimus deleniti error nisi officia sint aliquid obcaecati laborum
+            dolorem aperiam itaque omnis, tenetur recusandae veniam similique at
+            in? Consequuntur, maiores.
+          </p>
+        </div>
       </m.div>
     </section>
   );

@@ -4,9 +4,9 @@ type Props = {
   image: string;
 };
 
-const ClassComponent = ({ name, description, image }: Props) => {
+const SportComponent = ({ name, description, image }: Props) => {
   const overlayStyles = `p-5 absolute z-30 flex h-[400px] w-[600px] flex-col items-center justify-center
-    whitespace-normal bg-primary-100 text-center text-white opacity-0 transition duration-500 hover:opacity-90`;
+    whitespace-normal bg-primary-100 text-center text-white opacity-0 transition duration-500 hover:opacity-90 rounded-md`;
   return (
     <li className="relative mx-5 inline-block h-[400px] w-[600px]">
       <div className={overlayStyles}>
@@ -18,4 +18,4 @@ const ClassComponent = ({ name, description, image }: Props) => {
   );
 };
 
-export default ClassComponent;
+export default SportComponent;

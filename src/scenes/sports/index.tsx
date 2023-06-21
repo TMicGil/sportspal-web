@@ -1,4 +1,4 @@
-import { SelectedPage, ClassType } from "@/shared/types";
+import { SelectedPage, SportType } from "@/shared/types";
 import imageTennis from "../../assets/GraphicTennis.jpg";
 import imageCycling from "../../assets/GraphicCycling.jpg";
 import imageRunning from "../../assets/GraphicRunning.jpg";
@@ -7,58 +7,72 @@ import imageSnorkeling from "../../assets/GraphicSnorkeling.jpg";
 import imageHiking from "../../assets/GraphicHiking.jpg";
 import { motion as m } from "framer-motion";
 import HText from "@/shared/HText";
-import ClassComponent from "./ClassComponent";
+import SportComponent from "./SportComponent";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
-const classes: Array<ClassType> = [
+const sportsList: Array<SportType> = [
   {
-    name: "Hiking with people",
+    name: "Hiking",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageHiking,
   },
   {
-    name: "Cycling around",
+    name: "Cycling",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageCycling,
   },
   {
-    name: "Running training and challenges",
+    name: "Running",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageRunning,
   },
   {
-    name: "Snorkeling around",
+    name: "Snorkeling",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageSnorkeling,
   },
   {
-    name: "Fitness training",
+    name: "Fitness",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageFitness,
   },
   {
-    name: "Tennis training and matches",
+    name: "Tennis",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageTennis,
   },
 ];
 
+const arrowVariant = {
+  animation: {
+    x: [0, 20, 0],
+    transition: {
+      x: {
+        repeat: Infinity,
+        duration: 2,
+        ease: "easeInOut",
+      },
+    },
+  },
+};
+
 type Props = {
   setSelectedPage: (value: SelectedPage) => void;
 };
 
-const OurClasses = ({ setSelectedPage }: Props) => {
+const Sports = ({ setSelectedPage }: Props) => {
   return (
-    <section id="ourclasses" className="w-full bg-gray-20 py-40">
-      <m.div onViewportEnter={() => setSelectedPage(SelectedPage.OurClasses)}>
+    <section id="sports" className="w-full bg-gray-20 py-40">
+      <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Sports)}>
         <div className="mx-auto w-5/6">
           <div className="md:w-3/5">
-            <HText>Our Classes</HText>
+            <HText>What do you practice ?</HText>
             <p className="py-5">
               Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
               tellus quam porttitor. Mauris velit euismod elementum arcu neque
@@ -67,10 +81,10 @@ const OurClasses = ({ setSelectedPage }: Props) => {
             </p>
           </div>
         </div>
-        <div className="mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden">
+        <div className="mt-10 h-[450px] w-full overflow-x-auto overflow-y-hidden">
           <ul className="w-[2800px] whitespace-nowrap">
-            {classes.map((item: ClassType, index) => (
-              <ClassComponent
+            {sportsList.map((item: SportType, index) => (
+              <SportComponent
                 key={`${item.name}-${index}`}
                 name={item.name}
                 description={item.description}
@@ -78,10 +92,17 @@ const OurClasses = ({ setSelectedPage }: Props) => {
               />
             ))}
           </ul>
+          <m.div
+            variants={arrowVariant}
+            animate="animation"
+            className="mx-auto w-5/6"
+          >
+            <ArrowRightIcon className="h-6 w-6" />
+          </m.div>
         </div>
       </m.div>
     </section>
   );
 };
 
-export default OurClasses;
+export default Sports;

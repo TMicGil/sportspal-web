@@ -5,13 +5,16 @@ type Props = {
 };
 
 const childVariant = {
-  hidden: { opacity: 0, scale: 0.9 },
+  hidden: { opacity: 1, scale: 0.9 },
   visible: { opacity: 1, scale: 1 },
 };
 
 const MocksUp = ({ image }: Props) => {
   return (
-    <m.div variants={childVariant} className="h-[600px] w-[400px]">
+    <m.div
+      variants={childVariant}
+      className="h-auto items-center justify-center"
+    >
       <img alt={`${image}`} src={image} />
     </m.div>
   );
