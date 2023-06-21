@@ -3,10 +3,14 @@ import {
   UserGroupIcon,
   AcademicCapIcon,
 } from "@heroicons/react/24/solid";
-import { BenefitType, SelectedPage } from "@/shared/types";
+import { BenefitType, MockupType, SelectedPage } from "@/shared/types";
 import { motion as m } from "framer-motion";
 import HText from "@/shared/HText";
 import Benefit from "./Benefit";
+import mockupHomepage from "../../assets/MobileApp01.png";
+import mockupMap from "../../assets/MobileApp02.png";
+import mockupEvent from "../../assets/MobileApp03.png";
+import MocksUp from "./MocksUp";
 
 const benefits: Array<BenefitType> = [
   {
@@ -26,6 +30,18 @@ const benefits: Array<BenefitType> = [
     title: "Expert and Pro Trainers",
     description:
       "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+  },
+];
+
+const mocksup: Array<MockupType> = [
+  {
+    image: mockupHomepage,
+  },
+  {
+    image: mockupMap,
+  },
+  {
+    image: mockupEvent,
   },
 ];
 
@@ -69,6 +85,17 @@ const Benefits = ({ setSelectedPage }: Props) => {
               description={benefit.description}
               setSelectedPage={setSelectedPage}
             />
+          ))}
+        </m.div>
+        <m.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={container}
+          className="item-center mt-10 justify-between gap-10 md:flex"
+        >
+          {mocksup.map((mockup: MockupType) => (
+            <MocksUp image={mockup.image} />
           ))}
         </m.div>
       </m.div>

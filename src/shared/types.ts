@@ -16,3 +16,7 @@ export interface ClassType {
   description?: string;
   image: string;
 }
+
+export interface MockupType {
+  image: string;
+}
