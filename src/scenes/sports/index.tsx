@@ -8,7 +8,7 @@ import imageHiking from "../../assets/GraphicHiking.jpg";
 import { motion as m } from "framer-motion";
 import HText from "@/shared/HText";
 import SportComponent from "./SportComponent";
-import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import "./hideScroll.css";
 
 const sportsList: Array<SportType> = [
   {
@@ -36,7 +36,7 @@ const sportsList: Array<SportType> = [
     image: imageSnorkeling,
   },
   {
-    name: "Fitness",
+    name: "Yoga",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     image: imageFitness,
@@ -51,11 +51,11 @@ const sportsList: Array<SportType> = [
 
 const arrowVariant = {
   animation: {
-    x: [0, 20, 0],
+    x: [0, -2400, 0],
     transition: {
       x: {
         repeat: Infinity,
-        duration: 2,
+        duration: 40,
         ease: "easeInOut",
       },
     },
@@ -72,7 +72,7 @@ const Sports = ({ setSelectedPage }: Props) => {
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Sports)}>
         <div className="mx-auto w-5/6">
           <div className="md:w-3/5">
-            <HText>What do you practice ?</HText>
+            <HText>Select sports that you wish</HText>
             <p className="py-5">
               Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
               tellus quam porttitor. Mauris velit euismod elementum arcu neque
@@ -81,8 +81,12 @@ const Sports = ({ setSelectedPage }: Props) => {
             </p>
           </div>
         </div>
-        <div className="mt-10 h-[450px] w-full overflow-x-auto overflow-y-hidden">
-          <ul className="w-[2800px] whitespace-nowrap">
+        <div className="hidescroll mt-10 h-[380px] w-full overflow-x-auto overflow-y-hidden">
+          <m.ul
+            variants={arrowVariant}
+            animate="animation"
+            className="w-[2800px] whitespace-nowrap"
+          >
             {sportsList.map((item: SportType, index) => (
               <SportComponent
                 key={`${item.name}-${index}`}
@@ -91,14 +95,7 @@ const Sports = ({ setSelectedPage }: Props) => {
                 image={item.image}
               />
             ))}
-          </ul>
-          <m.div
-            variants={arrowVariant}
-            animate="animation"
-            className="mx-auto w-5/6"
-          >
-            <ArrowRightIcon className="h-6 w-6" />
-          </m.div>
+          </m.ul>
         </div>
       </m.div>
     </section>

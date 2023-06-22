@@ -88,17 +88,19 @@ const Benefits = ({ setSelectedPage }: Props) => {
             />
           ))}
         </m.div>
+        {/* MOCKS UP */}
         <m.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
           variants={container}
-          className="mt-10 w-full items-center justify-between gap-10 md:flex"
+          className="mt-10 w-full items-center justify-center gap-10 md:flex"
         >
           {mocksup.map((mockup: MockupType) => (
             <MocksUp image={mockup.image} />
           ))}
         </m.div>
+        {/* PARAGRAPH */}
         <div className="md:my-15 mt-10 md:w-3/5">
           <HText>As fast as you can !</HText>
           <p className="my-5 text-sm">

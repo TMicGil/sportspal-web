@@ -17,7 +17,7 @@ const Home = ({ setSelectedPage }: Props) => {
       {/* IMAGE AND MAIN HEADER */}
       <m.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
-        className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
+        className="mx-auto w-5/6 items-center justify-center md:mt-20 md:flex md:h-5/6"
       >
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5 ">

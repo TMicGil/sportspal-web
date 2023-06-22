@@ -11,10 +11,7 @@ const childVariant = {
 
 const MocksUp = ({ image }: Props) => {
   return (
-    <m.div
-      variants={childVariant}
-      className="h-auto items-center justify-center"
-    >
+    <m.div variants={childVariant} className="h-auto">
       <img alt={`${image}`} src={image} />
     </m.div>
   );
