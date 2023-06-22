@@ -40,7 +40,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               target="_blank"
               onSubmit={onSubmit}
               method="POST"
-              action="https://formsubmit.co/amiel10th@gmail.com"
+              action="https://formsubmit.co/1622ff61ee4e3baa50fd7a54515eeee9"
             >
               {/* NAME */}
               <input
@@ -91,7 +91,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               {errors.message && (
                 <p className="mt-1 text-sm text-secondary-500">
                   {errors.message.type === "required" &&
-                    "Hey write why you're here !"}
+                    "Hey, write why you're here !"}
                   {errors.message.type === "maxLength" &&
                     "Max length is 480 char."}
                 </p>
@@ -104,7 +104,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
               </button>
             </form>
           </div>
-          <div className="relative mt-10 basis-3/5">
+          <div className="relative ml-5 mt-10 basis-3/5">
             <div className="mt-2 before:-left-20 before:-top-20 before:z-[-1]  md:before:absolute md:before:content-bebettertext">
               <img alt="home-page-text" src={HomePageText} />
             </div>
