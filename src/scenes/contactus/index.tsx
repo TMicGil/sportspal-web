@@ -21,7 +21,7 @@ const ContactUs = ({ setSelectedPage }: Props) => {
     }
   };
   return (
-    <section id="contactus" className="mx-auto w-5/6 pb-32 pt-24">
+    <section id="contactus" className="mx-auto w-5/6 py-24">
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.ContactUs)}>
         {/* HEADER */}
         <div className="md:w-3/5">
