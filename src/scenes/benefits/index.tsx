@@ -1,16 +1,16 @@
+import { BenefitType, MockupType, SelectedPage } from "@/shared/types";
+import HText from "@/shared/HText";
+import Benefit from "./Benefit";
+import MocksUp from "./MocksUp";
 import {
   MapPinIcon,
   UserGroupIcon,
   RocketLaunchIcon,
 } from "@heroicons/react/24/solid";
-import { BenefitType, MockupType, SelectedPage } from "@/shared/types";
 import { motion as m } from "framer-motion";
-import HText from "@/shared/HText";
-import Benefit from "./Benefit";
 import mockupHomepage from "../../assets/MobileApp01.png";
 import mockupMap from "../../assets/MobileApp02.png";
 import mockupEvent from "../../assets/MobileApp03.png";
-import MocksUp from "./MocksUp";
 
 const benefits: Array<BenefitType> = [
   {
