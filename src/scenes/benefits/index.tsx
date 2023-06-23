@@ -81,7 +81,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
         <m.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={container}
           className="mt-5 items-center justify-between gap-8 md:flex"
         >
