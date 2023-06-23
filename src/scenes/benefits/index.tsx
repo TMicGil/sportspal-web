@@ -61,7 +61,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
     <section id="benefits" className="mx-auto min-h-full w-5/6 py-20">
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Benefits)}>
         {/* HEADER  */}
-        <div className="md:my-5 md:w-3/5">
+        <m.div
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, type: "spring" }}
+          className="md:my-5 md:w-3/5"
+        >
           <HText>More than just an app</HText>
           <p className="my-5 text-sm">
             What is so awesome about Sport's Pal ? Well, it's obviously sharing
@@ -71,7 +76,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             available ? We are sure here at Sport's Pal, that you could quickly
             find someone on the app, who will be delighted to come with you !
           </p>
-        </div>
+        </m.div>
         {/* BENEFITS */}
         <m.div
           initial="hidden"
@@ -103,7 +108,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
           ))}
         </m.div>
         {/* PARAGRAPH */}
-        <div className="md:my-15 mt-10 md:w-3/5">
+        <m.div
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.2, type: "spring" }}
+          className="md:my-15 mt-10 md:w-3/5"
+        >
           <HText>As fast as you can</HText>
           <p className="my-5 text-sm">
             We know here at Sport's Pal, that our members are active, productive
@@ -117,7 +127,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
             <br />
             Ready to meet your new friends ?
           </p>
-        </div>
+        </m.div>
       </m.div>
     </section>
   );

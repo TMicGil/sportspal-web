@@ -22,7 +22,12 @@ const Home = ({ setSelectedPage }: Props) => {
         {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5 ">
           {/* HEADINGS */}
-          <div className="md:-mt-20">
+          <m.div
+            initial={{ opacity: 0, x: -200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, type: "spring" }}
+            className="md:-mt-20"
+          >
             <div className="relative">
               <div className="before:-left-20 before:-top-20 before:z-[-1] md:before:absolute  md:before:content-bebettertext">
                 <img alt="home-page-text" src={HomePageText} />
@@ -37,7 +42,7 @@ const Home = ({ setSelectedPage }: Props) => {
               hobbies as you do, stay in contact, share goals and improve
               yourself while having fun !
             </p>
-          </div>
+          </m.div>
           {/* ACTIONS */}
           <div className="mt-8 flex items-center gap-8">
             <ActionButton setSelectedPage={setSelectedPage}>

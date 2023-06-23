@@ -71,7 +71,12 @@ const Sports = ({ setSelectedPage }: Props) => {
     <section id="sports" className="w-full bg-gray-20 py-28">
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Sports)}>
         <div className="mx-auto w-5/6">
-          <div className="md:w-3/5">
+          <m.div
+            initial={{ opacity: 0, x: 200 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, type: "spring" }}
+            className="md:w-3/5"
+          >
             <HText>Select sports that you wish</HText>
             <p className="py-5">
               We have all popular sports available on Sport's Pal.
@@ -79,7 +84,7 @@ const Sports = ({ setSelectedPage }: Props) => {
               What is cool about it, is you can try new ones, who knows, they
               might become your new hobby !
             </p>
-          </div>
+          </m.div>
         </div>
         <div className="hidescroll mt-10 h-[380px] w-full overflow-x-auto overflow-y-hidden">
           <m.ul
