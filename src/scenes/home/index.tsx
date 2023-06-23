@@ -29,10 +29,13 @@ const Home = ({ setSelectedPage }: Props) => {
               </div>
             </div>
             <p className="mt-8 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              harum eum vel sapiente autem architecto reiciendis hic fugit
-              itaque omnis asperiores, perferendis, voluptatibus ut. Sapiente
-              hic cupiditate architecto nulla dicta!
+              Sport's Pal is an application, both available on web and mobile,
+              that allows you to do sports, or discover new ones, with people
+              that are around you.
+              <br />
+              You'll then be able to meet like minded-people, with the same
+              hobbies as you do, stay in contact, share goals and improve
+              yourself while having fun !
             </p>
           </div>
           {/* ACTIONS */}

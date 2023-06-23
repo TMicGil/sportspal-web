@@ -27,10 +27,11 @@ const ContactUs = ({ setSelectedPage }: Props) => {
         <div className="md:w-3/5">
           <HText>Interested ?</HText>
           <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            suscipit nobis neque hic non maxime nemo provident reiciendis fugit
-            adipisci molestiae itaque voluptas repellat eveniet repudiandae quo
-            quaerat, asperiores sapiente.
+            Our devs are still working on the app, it's a matter of time !
+            <br />
+            To join the team, to be on the private list of the user testing
+            interface, or provide some suggestions, such as sports that you'd
+            like to have on the app, please fill in this form.
           </p>
         </div>
         {/* FORM */}

@@ -17,19 +17,19 @@ const benefits: Array<BenefitType> = [
     icon: <UserGroupIcon className="h-6 w-6" />,
     title: "Meet like minded people",
     description:
-      "Neque adipiscing amet amet enim. Feugiat dolor enim fermentum in a in lectus pellentesque. Ullamcorper et.",
+      "Meeting new people is great, with the same sport's hobbies, even better. What about discover a new sport ?",
   },
   {
     icon: <MapPinIcon className="h-6 w-6" />,
     title: "Schedule a meeting point",
     description:
-      "Eu ipsum id egestas risus tempus enim semper felis quis. Nec consectetur ac venenatis facilisi est. Eget ac turpis id.",
+      "Awesome ! Schedule in a blink of an eyes a meeting point with your new Pal for your activity today.",
   },
   {
     icon: <RocketLaunchIcon className="h-6 w-6" />,
     title: "Get started !",
     description:
-      "Fusce vestibulum aliquam ut cras. Nisl lectus egestas sapien nisl. Lacus at mi sit pellentesque. Congue parturient.",
+      "Prepare your gear and show up ! No more excuses, thanks to Sport's Pal, you will always have someone to have fun with.",
   },
 ];
 
@@ -64,10 +64,12 @@ const Benefits = ({ setSelectedPage }: Props) => {
         <div className="md:my-5 md:w-3/5">
           <HText>More than just an app</HText>
           <p className="my-5 text-sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
-            ducimus deleniti error nisi officia sint aliquid obcaecati laborum
-            dolorem aperiam itaque omnis, tenetur recusandae veniam similique at
-            in? Consequuntur, maiores.
+            What is so awesome about Sport's Pal ? Well, it's obviously sharing
+            with others !
+            <br />
+            Ever wanted to do snorkeling but no one amongst your friend is
+            available ? We are sure here at Sport's Pal, that you could quickly
+            find someone on the app, who will be delighted to come with you !
           </p>
         </div>
         {/* BENEFITS */}
@@ -102,12 +104,18 @@ const Benefits = ({ setSelectedPage }: Props) => {
         </m.div>
         {/* PARAGRAPH */}
         <div className="md:my-15 mt-10 md:w-3/5">
-          <HText>As fast as you can !</HText>
+          <HText>As fast as you can</HText>
           <p className="my-5 text-sm">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro
-            ducimus deleniti error nisi officia sint aliquid obcaecati laborum
-            dolorem aperiam itaque omnis, tenetur recusandae veniam similique at
-            in? Consequuntur, maiores.
+            We know here at Sport's Pal, that our members are active, productive
+            and want to do it... NOW. That's the reason why our mobile app is
+            intuitive and collaborative.
+            <br />
+            You will be able to see on the map all the events that are going on
+            around you.
+            <br />
+            Participate to an event, or create yours, has never been so easy !
+            <br />
+            Ready to meet your new friends ?
           </p>
         </div>
       </m.div>

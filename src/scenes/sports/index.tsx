@@ -12,46 +12,46 @@ import "./hideScroll.css";
 
 const sportsList: Array<SportType> = [
   {
-    name: "Hiking",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: imageHiking,
-  },
-  {
     name: "Cycling",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "We're not only talking about pro-cycling, you can as well cruise on the sea-side with the new bike you just bought.",
     image: imageCycling,
+  },
+  {
+    name: "Hiking",
+    description:
+      "Let's go on a hike to check the nature and surroundings of your area, breath some fresh air and disconnect from work.",
+    image: imageHiking,
   },
   {
     name: "Running",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Let's have a detox run around the city, to keep you in shape, aspire to be a better person, and discover new places.",
     image: imageRunning,
   },
   {
     name: "Snorkeling",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "For the lucky one's, have some basic gears and dream about fishes and seabeds.",
     image: imageSnorkeling,
   },
   {
     name: "Yoga",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Stay flex and strong with some private yoga classes. We're sure it will be your next hobby.",
     image: imageFitness,
   },
   {
     name: "Tennis",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "Well, playing tennis is fun, but what if you could schedule your own tournament ?",
     image: imageTennis,
   },
 ];
 
 const arrowVariant = {
   animation: {
-    x: [0, -2400, 0],
+    x: [70, -2400, 70],
     transition: {
       x: {
         repeat: Infinity,
@@ -68,16 +68,16 @@ type Props = {
 
 const Sports = ({ setSelectedPage }: Props) => {
   return (
-    <section id="sports" className="w-full bg-gray-20 py-40">
+    <section id="sports" className="w-full bg-gray-20 py-28">
       <m.div onViewportEnter={() => setSelectedPage(SelectedPage.Sports)}>
         <div className="mx-auto w-5/6">
           <div className="md:w-3/5">
             <HText>Select sports that you wish</HText>
             <p className="py-5">
-              Fringilla a sed at suspendisse ut enim volutpat. Rhoncus vel est
-              tellus quam porttitor. Mauris velit euismod elementum arcu neque
-              facilisi. Amet semper tortor facilisis metus nibh. Rhoncus sit
-              enim mattis odio in risus nunc.
+              We have all popular sports available on Sport's Pal.
+              <br />
+              What is cool about it, is you can try new ones, who knows, they
+              might become your new hobby !
             </p>
           </div>
         </div>
